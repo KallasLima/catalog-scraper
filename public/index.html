@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Catalog scraper</title
+  ><link rel="stylesheet" href="style.css" />
+  <body>
+    <main>
+      <header>
+        <span class="eyebrow">DATA / COLLECTION</span>
+        <h1>From page to catalog.</h1>
+        <p>A small HTML scraping API with a readable, repeatable result.</p>
+      </header>
+      <section class="toolbar">
+        <form id="search">
+          <label for="query">Search laptops</label>
+          <div>
+            <input id="query" placeholder="Try Atlas" maxlength="100" /><button>Search</button
+            ><button id="reload" type="button">Reload</button>
+          </div>
+        </form>
+        <p id="status" role="status">Loading catalog…</p>
+      </section>
+      <div id="results" class="grid"></div>
+      <footer>
+        Demo products are fictional. Live mode uses
+        <a href="https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops"
+          >Web Scraper’s public test site</a
+        >. Prices in USD.
+      </footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

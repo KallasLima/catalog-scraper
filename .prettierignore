@@ -1,0 +1,7 @@
+node_modules
+dist
+android
+ios
+data
+.expo
+package-lock.json
