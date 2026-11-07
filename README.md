@@ -6,6 +6,8 @@ Turn a public HTML catalog into a small, predictable JSON API. Includes a search
 
 This is a refreshed portfolio edition of an earlier technical exercise. The current implementation, demo data and interface were revised in 2026. It is a local learning/demo application; deployment, accounts and production operations are outside its scope.
 
+The browser inspector presents actual source metadata, the current request route and a searchable result table. IBM Plex Mono is bundled under the SIL Open Font License; its notice is in `public/fonts`.
+
 ## Run in 2 minutes
 
 Requires Node.js 22.13+ (tested with 22.23.4) and npm.

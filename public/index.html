@@ -1,33 +1,52 @@
 <!doctype html>
 <html lang="en">
-  <meta charset="utf-8" /><meta
-    name="viewport"
-    content="width=device-width,initial-scale=1"
-  /><title>Catalog scraper</title
-  ><link rel="stylesheet" href="style.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Catalog / Extract</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
   <body>
+    <nav class="brand" aria-label="Project"><span>CATALOG</span><b>/ EXTRACT</b></nav>
     <main>
       <header>
-        <span class="eyebrow">DATA / COLLECTION</span>
-        <h1>From page to catalog.</h1>
-        <p>A small HTML scraping API with a readable, repeatable result.</p>
+        <h1>Catalog inspector</h1>
+        <p>Inspect a scraped collection and its JSON.</p>
       </header>
-      <section class="toolbar">
+      <section class="toolbar" aria-label="Catalog query">
         <form id="search">
           <label for="query">Search laptops</label>
-          <div>
+          <div class="search-controls">
             <input id="query" placeholder="Try Atlas" maxlength="100" /><button>Search</button
-            ><button id="reload" type="button">Reload</button>
+            ><button id="reload" type="button" class="secondary">Reload</button>
           </div>
         </form>
-        <p id="status" role="status">Loading catalog…</p>
       </section>
-      <div id="results" class="grid"></div>
+      <dl class="metadata">
+        <div>
+          <dt>Source</dt>
+          <dd id="source">—</dd>
+        </div>
+        <div>
+          <dt>Fetched</dt>
+          <dd id="fetched">—</dd>
+        </div>
+        <div>
+          <dt>Count</dt>
+          <dd id="count">—</dd>
+        </div>
+      </dl>
+      <div class="request">
+        <span class="method">GET</span><code id="request-path">/api/laptops</code
+        ><a id="open-json" href="/api/laptops" target="_blank" rel="noopener">Open JSON ↗</a>
+      </div>
+      <p id="status" role="status">Loading catalog…</p>
+      <div id="results" class="results"></div>
       <footer>
-        Demo products are fictional. Live mode uses
+        Fictional offline fixture by default. Live mode uses
         <a href="https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops"
           >Web Scraper’s public test site</a
-        >. Prices in USD.
+        >. Prices in USD. Timestamps are shown in local time.
       </footer>
     </main>
     <script src="app.js"></script>
